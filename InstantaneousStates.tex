@@ -1,0 +1,63 @@
+\section{Instantaneous states}
+
+In previous section we said that the finite state, continuous time, Markov chain can not have instantaneous state. But for our modeling purposes we would like to artificially add instantaneous states to the concept of finite state chain. We start with another description of the continuous time chain which allows us to consider instatenous states.
+
+Let $(\Omega,\{\mathcal{F}_{t}\}_{t\in\mathbb{R}_0},X,\{\mathbb{P}_x\}_{x\in\mathcal{X}})$ be a continous-time Markov chain with finite state space $\mathcal{X}$ and infinitesimal generator $
+\bm{Q}$. Define the sequence $\{\tau_k\}_{k\in\mathbb{N}_0}$ by 
+\begin{align*}
+\tau_0&=0\\
+\tau_{k+1}&=\inf\{t>\tau_k: X_y\neq X_{\tau_n}\}, \quad k\in\mathbb{N}.
+\end{align*}
+Variable $\tau_k$ represents the time of $k$-th jump of the chain. It can be shown that every $\tau_k$ is a stopping time with respect to filtration $\{\mathcal{F}_{t}\}_{t\geq 0}$.
+\begin{df}
+The sequnce $\{X_k,k\in\mathbb{N}_0\}$ defined by
+\begin{align*}
+X^*_0&=X_0\\
+X^*_k&=X_{\tau_k},\quad k\in\mathbb{N}
+\end{align*}
+is called the {\em embeded chain.}
+\end{df}
+\begin{thm}
+\begin{enumerate}[(i)] 
+\item The embeded chain is a Markov chain with thransition matrix $\bm{Q}^*$ given by
+\begin{equation}
+\label{TrMat} 
+ \bm{Q}^*=\diag\{\bm{q}\}^{-1}\bm{Q}+\bm{I},
+\end{equation}
+where \bm{Q} is the generator matrix and $\bm{q}\geq 0$ is the vector of total rates. In case of $q_x=0$ we put $\tfrac{0}{0}=1$.
+\item  The sequence of variables $\{T_k=\tau_k-\tau_{k-1}, k\in\mathbb{N}\}$ is pairwise independent. Moreover, conditional on $X^*_k=x$, $T_k$ has exponential distribution with mean value $1/q_x$ if $q_x>0$ and if $q_x=0$, $T_k$ is identicaly equal to infinity.
+\item Conditional on the event $[\tau_k\leq s <\tau_{k+1},X_s=j,X_0=j_0]$, sequences $\tau_1,X^*_1,\dots,\tau_k,X^*_k$ and $\tau_{k+1},X^*_{k+1},\tau_{k+2},X^*_{k+2},\dots$ are independent.
+\end{enumerate}
+\end{thm}
+The preceding theorem describes the whole probabilistic structure of embeded chain and times of jumps by mean of the generator matrix $\bm{Q}$.   
+Having the embed chain $X^*$ togeher with times of jumps $\{\tau_k\}$ we can reconstruct the original chain simply by putting
+\begin{equation} 
+\label{ReducedChain}
+ X_t=X^*_n, \quad \text{for } \tau_n\leq t< \tau_{n+1}.
+\end{equation}
+Thus we can look at continuos-time Markov chain as the couple $\{X^*_k,\tau_k\}_{k\in\mathbb{N}_0}$. If want make a state to be instantenous, that is, to force the chain to leave this state immediately after jumping in, all we need to do is to change the times of jump appropriately. Start with a finite generator matrix $\bm{Q}$ matrix and a vector $\bm{q}$ of total rates which can have infinite entries. Of course the finite entries of $\bm{q}$ must satysfies $q_x=-q_{xx}$. Then the embeded chain is decsribed by the transition matrix given by $\eqref{TrMat}$. We define times of jumps by 
+\begin{align*}
+\tau_0&=0,\\
+\tau_{k+1}&=\tau_k + \frac{D_k}{q_{X^*_k}}, \quad k\in\mathbb{N},
+\end{align*}  
+where $\{D_k\}_{k\in\mathbb{N}}$ is a sequence of i.i.d. variables with exponential distribution with mean value equal to $1$. In case of $q_{X^*_k}=\infty$ we simply put $\tau_{k+1}=\tau_k$. Embeded chain together with times of jumps define the finite state, contiuous time, Markov chain with instantaneous states, which we called a {\em general chain}. 
+
+In the {\em general} chain multiple transitions in one time instance can occur. It is natural to consider such event as a one transition. The process defined by \eqref{ReducedChain} has this property, that is, it does not record instantaneous states. We call this process {\em reduced chain}. The impornace of reduced chain, as we will see, lies in the fact that it pays the same reward as the general chain. This allows us to fit the problem of optimal control of general chain to set-up of previous section.
+
+First look at the generator matrix $\widehat{\bm{Q}}$ of the reduced chain. Denote the set of stable states by $S$ and the set instantaneous states by $I$. Then the generator matrix of general chain is the form
+\[\bm{Q}=
+\left( \begin{array}{cc}
+\bm{Q}_S & \bm{Q}_R  \\
+* & * 
+\end{array} \right),
+\] 
+where $\bm{Q}_S$ is the matrix of transition rates from state states to state states and $\bm{Q}_R$ is the matrix of transition rates from state states to instantaneous states. For remaining blocks of the matrix $\bm{Q}$ we do not introduce special notation. Further denote instantaneous transition matrix of the general chain by
+\[\bar{\bm{Q}}^*=
+\left( \begin{array}{cc}
+\bm{I}_S & 0  \\
+\bm{Q}^*_S & \bm{Q}^*_R 
+\end{array} \right).
+\] 
+Then 
+\[ \widehat{\bm{Q}}=\bm{Q}_S+\bm{Q}_R \,(\bm{I}_R-\bm{Q}_R^*)^{-1}\,\bm{Q}_S^*. \]
+

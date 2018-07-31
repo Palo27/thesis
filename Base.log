@@ -1,0 +1,678 @@
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2011.6.9)  14 MAY 2012 20:15
+entering extended mode
+**C:/Data/School/MFF/Diplomka/!!!*Text/Amster/Base.tex
+("C:/Data/School/MFF/Diplomka/!!! Text/Amster/Base.tex"
+LaTeX2e <2009/09/24>
+Babel <v3.8l> and hyphenation patterns for english, afrikaans, ancientgreek, ar
+abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
+croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, ga
+lician, german, german-x-2009-06-19, greek, gujarati, hindi, hungarian, iceland
+ic, indonesian, interlingua, irish, italian, kannada, kurmanji, lao, latin, lat
+vian, lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerm
+an, ngerman-x-2009-06-19, nynorsk, oriya, panjabi, pinyin, polish, portuguese, 
+romanian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swis
+sgerman, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, u
+senglishmax, welsh, loaded.
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\report.cls"
+Document Class: report 2007/10/19 v1.4h Standard LaTeX document class
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\size12.clo"
+File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/message (HO)
+)
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+Package: ltxcmds 2011/04/18 v1.20 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count88
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\ams\math\amsmath.sty"
+Package: amsmath 2000/07/18 v2.13 AMS math features
+\@mathmargin=\skip43
+
+For additional information on amsmath, use the `?' option.
+("C:\Program Files\MiKTeX 2.9\tex\latex\ams\math\amstext.sty"
+Package: amstext 2000/06/29 v2.01
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\ams\math\amsgen.sty"
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks15
+\ex@=\dimen105
+))
+("C:\Program Files\MiKTeX 2.9\tex\latex\ams\math\amsbsy.sty"
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen106
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\ams\math\amsopn.sty"
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count89
+LaTeX Info: Redefining \frac on input line 211.
+\uproot@=\count90
+\leftroot@=\count91
+LaTeX Info: Redefining \overline on input line 307.
+\classnum@=\count92
+\DOTSCASE@=\count93
+LaTeX Info: Redefining \ldots on input line 379.
+LaTeX Info: Redefining \dots on input line 382.
+LaTeX Info: Redefining \cdots on input line 467.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen107
+LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
+\macc@depth=\count94
+\c@MaxMatrixCols=\count95
+\dotsspace@=\muskip10
+\c@parentequation=\count96
+\dspbrk@lvl=\count97
+\tag@help=\toks16
+\row@=\count98
+\column@=\count99
+\maxfields@=\count100
+\andhelp@=\toks17
+\eqnshift@=\dimen108
+\alignsep@=\dimen109
+\tagshift@=\dimen110
+\tagwidth@=\dimen111
+\totwidth@=\dimen112
+\lineht@=\dimen113
+\@envbody=\toks18
+\multlinegap=\skip44
+\multlinetaggap=\skip45
+\mathdisplay@stack=\toks19
+LaTeX Info: Redefining \[ on input line 2666.
+LaTeX Info: Redefining \] on input line 2667.
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\ams\classes\amsthm.sty"
+Package: amsthm 2004/08/06 v2.20
+\thm@style=\toks20
+\thm@bodyfont=\toks21
+\thm@headfont=\toks22
+\thm@notefont=\toks23
+\thm@headpunct=\toks24
+\thm@preskip=\skip46
+\thm@postskip=\skip47
+\thm@headsep=\skip48
+\dth@everypar=\toks25
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty"
+Package: amssymb 2009/06/22 v3.00
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty"
+Package: amsfonts 2009/06/22 v3.00 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 96.
+))
+(C:\Users\Stando\AppData\Roaming\MiKTeX\2.9\tex\latex\subfigure\subfigure.sty
+Package: subfigure 2002/07/30 v2.1.4 subfigure package
+\subfigtopskip=\skip49
+\subfigcapskip=\skip50
+\subfigcaptopadj=\dimen114
+\subfigbottomskip=\skip51
+\subfigcapmargin=\dimen115
+\subfiglabelskip=\skip52
+\c@subfigure=\count101
+\c@lofdepth=\count102
+\c@subtable=\count103
+\c@lotdepth=\count104
+
+****************************************
+* Local config file subfigure.cfg used *
+****************************************
+(C:\Users\Stando\AppData\Roaming\MiKTeX\2.9\tex\latex\subfigure\subfigure.cfg)
+\subfig@top=\skip53
+\subfig@bottom=\skip54
+) ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\color.sty"
+Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: pdftex.def on input line 130.
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.sty"
+Package: geometry 2010/09/12 v5.6 Page Geometry
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifvtex.sty"
+Package: ifvtex 2010/03/01 v1.5 Switches for detecting VTeX and its modes (HO)
+Package ifvtex Info: VTeX not detected.
+)
+("C:\Program Files\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty"
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+\Gm@cnth=\count105
+\Gm@cntv=\count106
+\c@Gm@tempcnt=\count107
+\Gm@bindingoffset=\dimen116
+\Gm@wd@mp=\dimen117
+\Gm@odd@mp=\dimen118
+\Gm@even@mp=\dimen119
+\Gm@layoutwidth=\dimen120
+\Gm@layoutheight=\dimen121
+\Gm@layouthoffset=\dimen122
+\Gm@layoutvoffset=\dimen123
+\Gm@dimlist=\toks26
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
+("C:\Program Files\MiKTeX 2.9\tex\latex\multirow\multirow.sty"
+\bigstrutjot=\dimen124
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\tools\enumerate.sty"
+Package: enumerate 1999/03/05 v3.00 enumerate extensions (DPC)
+\@enLab=\toks27
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\epsfig.sty"
+Package: epsfig 1999/02/16 v1.7a (e)psfig emulation (SPQR)
+\epsfxsize=\dimen125
+\epsfysize=\dimen126
+)
+(C:\Users\Stando\AppData\Roaming\MiKTeX\2.9\tex\latex\bezos\accents.sty
+Package: accents 2006/05/12 v1.3 Math Accent Tools
+\cc@skew=\dimen127
+\cc@wd=\dimen128
+\cc@code=\count108
+\cc@group=\count109
+\cc@skewchar=\count110
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\tools\verbatim.sty"
+Package: verbatim 2003/08/22 v1.5q LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks28
+\verbatim@line=\toks29
+\verbatim@in@stream=\read1
+)
+(C:\Users\Stando\AppData\Roaming\MiKTeX\2.9\tex\latex\easy\easybmat.sty
+Document Style `easybmat' v1.0 <2001/06/13>.
+(C:\Users\Stando\AppData\Roaming\MiKTeX\2.9\tex\latex\easy\easy.sty
+Document Style `easy' v1.1 <2001/05/31>.
+Package: easy 2001/05/31 v1.1
+\@easy@level=\count111
+\@easy@ncol=\count112
+\@easy@nrow=\count113
+\@easy@cnt=\count114
+\@easy@boxviii=\box28
+\@easy@minxviii=\dimen129
+\@easy@minyviii=\dimen130
+\@easy@maxxviii=\dimen131
+\@easy@maxyviii=\dimen132
+\@easy@boxvii=\box29
+\@easy@minxvii=\dimen133
+\@easy@minyvii=\dimen134
+\@easy@maxxvii=\dimen135
+\@easy@maxyvii=\dimen136
+\@easy@boxvi=\box30
+\@easy@minxvi=\dimen137
+\@easy@minyvi=\dimen138
+\@easy@maxxvi=\dimen139
+\@easy@maxyvi=\dimen140
+\@easy@boxv=\box31
+\@easy@minxv=\dimen141
+\@easy@minyv=\dimen142
+\@easy@maxxv=\dimen143
+\@easy@maxyv=\dimen144
+\@easy@boxiv=\box32
+\@easy@minxiv=\dimen145
+\@easy@minyiv=\dimen146
+\@easy@maxxiv=\dimen147
+\@easy@maxyiv=\dimen148
+\@easy@boxiii=\box33
+\@easy@minxiii=\dimen149
+\@easy@minyiii=\dimen150
+\@easy@maxxiii=\dimen151
+\@easy@maxyiii=\dimen152
+\@easy@boxii=\box34
+\@easy@minxii=\dimen153
+\@easy@minyii=\dimen154
+\@easy@maxxii=\dimen155
+\@easy@maxyii=\dimen156
+\@easy@boxi=\box35
+\@easy@minxi=\dimen157
+\@easy@minyi=\dimen158
+\@easy@maxxi=\dimen159
+\@easy@maxyi=\dimen160
+\@easy@hsizexxx=\dimen161
+\@easy@vsizexxx=\dimen162
+\@easy@hsizexxix=\dimen163
+\@easy@vsizexxix=\dimen164
+\@easy@hsizexxviii=\dimen165
+\@easy@vsizexxviii=\dimen166
+\@easy@hsizexxvii=\dimen167
+\@easy@vsizexxvii=\dimen168
+\@easy@hsizexxvi=\dimen169
+\@easy@vsizexxvi=\dimen170
+\@easy@hsizexxv=\dimen171
+\@easy@vsizexxv=\dimen172
+\@easy@hsizexxiv=\dimen173
+\@easy@vsizexxiv=\dimen174
+\@easy@hsizexxiii=\dimen175
+\@easy@vsizexxiii=\dimen176
+\@easy@hsizexxii=\dimen177
+\@easy@vsizexxii=\dimen178
+\@easy@hsizexxi=\dimen179
+\@easy@vsizexxi=\dimen180
+\@easy@hsizexx=\dimen181
+\@easy@vsizexx=\dimen182
+\@easy@hsizexix=\dimen183
+\@easy@vsizexix=\dimen184
+\@easy@hsizexviii=\dimen185
+\@easy@vsizexviii=\dimen186
+\@easy@hsizexvii=\dimen187
+\@easy@vsizexvii=\dimen188
+\@easy@hsizexvi=\dimen189
+\@easy@vsizexvi=\dimen190
+\@easy@hsizexv=\dimen191
+\@easy@vsizexv=\dimen192
+\@easy@hsizexiv=\dimen193
+\@easy@vsizexiv=\dimen194
+\@easy@hsizexiii=\dimen195
+\@easy@vsizexiii=\dimen196
+\@easy@hsizexii=\dimen197
+\@easy@vsizexii=\dimen198
+\@easy@hsizexi=\dimen199
+\@easy@vsizexi=\dimen200
+\@easy@hsizex=\dimen201
+\@easy@vsizex=\dimen202
+\@easy@hsizeix=\dimen203
+\@easy@vsizeix=\dimen204
+\@easy@hsizeviii=\dimen205
+\@easy@vsizeviii=\dimen206
+\@easy@hsizevii=\dimen207
+\@easy@vsizevii=\dimen208
+\@easy@hsizevi=\dimen209
+\@easy@vsizevi=\dimen210
+\@easy@hsizev=\dimen211
+\@easy@vsizev=\dimen212
+\@easy@hsizeiv=\dimen213
+\@easy@vsizeiv=\dimen214
+\@easy@hsizeiii=\dimen215
+\@easy@vsizeiii=\dimen216
+\@easy@hsizeii=\dimen217
+\@easy@vsizeii=\dimen218
+\@easy@hsizei=\dimen219
+\@easy@vsizei=\dimen220
+\@easy@dash@len=\dimen221
+\@easy@dash@sep=\dimen222
+)
+Package: easybmat 2001/05/31 v1.1
+\@bmat@size@rule=\dimen223
+\@bmat@size@dash=\dimen224
+) (C:\Users\Stando\AppData\Roaming\MiKTeX\2.9\tex\latex\appendix\appendix.sty
+Package: appendix 2009/09/02 v1.2b extra appendix facilities
+\c@@pps=\count115
+\c@@ppsavesec=\count116
+\c@@ppsaveapp=\count117
+)
+\dwidehatheight=\skip55
+\c@thm=\count118
+("C:\Data\School\MFF\Diplomka\!!! Text\Amster\Base.aux"
+
+LaTeX Warning: Label `skorochod1' multiply defined.
+
+
+LaTeX Warning: Label `sub@skorochod1' multiply defined.
+
+
+LaTeX Warning: Label `skorochod2' multiply defined.
+
+
+LaTeX Warning: Label `sub@skorochod2' multiply defined.
+
+
+LaTeX Warning: Label `skorochod1' multiply defined.
+
+
+LaTeX Warning: Label `sub@skorochod1' multiply defined.
+
+
+LaTeX Warning: Label `skorochod2' multiply defined.
+
+
+LaTeX Warning: Label `sub@skorochod2' multiply defined.
+
+
+LaTeX Warning: Label `skorochod2' multiply defined.
+
+
+LaTeX Warning: Label `sub@skorochod2' multiply defined.
+
+
+LaTeX Warning: Label `skorochod2' multiply defined.
+
+
+LaTeX Warning: Label `sub@skorochod2' multiply defined.
+
+
+LaTeX Warning: Label `Contour' multiply defined.
+
+
+LaTeX Warning: Label `Howard' multiply defined.
+
+)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+ (C:\Users\Stando\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count119
+\scratchdimen=\dimen225
+\scratchbox=\box36
+\nofMPsegments=\count120
+\nofMParguments=\count121
+\everyMPshowfont=\toks30
+\MPscratchCnt=\count122
+\MPscratchDim=\dimen226
+\MPnumerator=\count123
+\everyMPtoPDFconversion=\toks31
+)
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(85.35826pt, 426.79135pt, 85.35826pt)
+* v-part:(T,H,B)=(85.35826pt, 645.87756pt, 113.81102pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=426.79135pt
+* \textheight=645.87756pt
+* \oddsidemargin=13.08827pt
+* \evensidemargin=13.08827pt
+* \topmargin=-23.91173pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=35.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+("C:\Data\School\MFF\Diplomka\!!! Text\Amster\Title.tex"
+<LogoVU.jpg, id=1, 194.7275pt x 194.7275pt>
+File: LogoVU.jpg Graphic file (type jpg)
+ <use LogoVU.jpg>
+Package pdftex.def Info: LogoVU.jpg used on input line 22.
+(pdftex.def)             Requested size: 194.727pt x 194.727pt.
+ [1
+
+{C:/Users/Stando/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <C:/Data/Sc
+hool/MFF/Diplomka/!!! Text/Amster/LogoVU.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 66--67
+
+ []
+
+[2] ("C:\Data\School\MFF\Diplomka\!!! Text\Amster\Base.toc"
+LaTeX Font Info:    Try loading font information for U+msa on input line 4.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
+File: umsa.fd 2009/06/22 v3.00 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 4.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
+File: umsb.fd 2009/06/22 v3.00 AMS symbols B
+))
+\tf@toc=\write3
+ [1
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 79--85
+
+ []
+
+[2
+
+]) ("C:\Data\School\MFF\Diplomka\!!! Text\Amster\Chapter1.tex" [3
+
+]
+Chapter 1.
+[4
+
+] [5]
+Overfull \hbox (8.56592pt too wide) in paragraph at lines 62--63
+[]\OT1/cmr/bx/n/12 Definition 1.3. []\OT1/cmr/m/n/12 A sys-tem $(
+\OML/cmm/m/it/12 ; \OMS/cmsy/m/n/12 fF[]g[]\OML/cmm/m/it/12 ; X; \OMS/cmsy/m/n/
+12 f\U/msb/m/n/12 P[]\OMS/cmsy/m/n/12 g[]\OT1/cmr/m/n/12 )$ is called a \OT1/cm
+r/m/it/12 (ho-moge-nous) Markov
+ []
+
+[6] [7]
+Overfull \hbox (11.42075pt too wide) in paragraph at lines 122--122
+[] 
+ []
+
+[8] [9] [10] [11] [12]
+Overfull \hbox (25.66786pt too wide) in paragraph at lines 335--336
+[]\OT1/cmr/bx/n/12 Definition 1.12. []\OT1/cmr/m/n/12 A sys-tem $(
+\OML/cmm/m/it/12 ; \OMS/cmsy/m/n/12 fF[]g[]\OML/cmm/m/it/12 ; X; \OMS/cmsy/m/n/
+12 f\U/msb/m/n/12 P[]\OMS/cmsy/m/n/12 g[]\OT1/cmr/m/n/12 )$ is called a \OT1/cm
+r/m/it/12 (ho-moge-nous) continous-
+ []
+
+[13]
+Overfull \hbox (5.32738pt too wide) in paragraph at lines 350--351
+[]\OT1/cmr/bx/n/12 Theorem 1.13. []\OT1/cmr/m/it/12 Let $\OMS/cmsy/m/n/12 X$ \O
+T1/cmr/m/it/12 be a count-able set. As-sume that the sys-tem $[][] \OT1/cmr/m/n
+/12 = \OMS/cmsy/m/n/12 f\OML/cmm/m/it/12 p[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 t
+\OT1/cmr/m/n/12 )\OMS/cmsy/m/n/12 g[]$
+ []
+
+[14] [15]
+Overfull \hbox (14.22958pt too wide) in paragraph at lines 444--446
+[]\OT1/cmr/m/it/12 The pro-cess $\OMS/cmsy/m/n/12 f\OML/cmm/m/it/12 X[]\OMS/cms
+y/m/n/12 g[]$ \OT1/cmr/m/it/12 is a Markov chain with fil-tra-tion $\OMS/cmsy/m
+/n/12 fF[]g[]$
+ []
+
+
+Overfull \hbox (11.47556pt too wide) in paragraph at lines 450--452
+[]\OT1/cmr/m/n/12 (i) All three re-quired con-di-tions from Def-i-ni-tion 1.3[]
+ fol-lows from their continuos-
+ []
+
+<obr1.jpg, id=75, 492.33937pt x 317.68687pt>
+File: obr1.jpg Graphic file (type jpg)
+ <use obr1.jpg>
+Package pdftex.def Info: obr1.jpg used on input line 471.
+(pdftex.def)             Requested size: 196.93225pt x 127.07248pt.
+
+<obr2.jpg, id=76, 604.50844pt x 405.01312pt>
+File: obr2.jpg Graphic file (type jpg)
+ <use obr2.jpg>
+Package pdftex.def Info: obr2.jpg used on input line 475.
+(pdftex.def)             Requested size: 193.44664pt x 129.60684pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[16] [17 <C:/Data/School/MFF/Diplomka/!!! Text/Amster/obr1.jpg> <C:/Data/School
+/MFF/Diplomka/!!! Text/Amster/obr2.jpg>] [18] [19])
+("C:\Data\School\MFF\Diplomka\!!! Text\Amster\Chapter2.tex" [20]
+Chapter 2.
+[21
+
+] [22] [23] [24] [25] [26] [27] [28]
+<DiscrContour.jpg, id=122, 361.35pt x 202.7575pt>
+File: DiscrContour.jpg Graphic file (type jpg)
+ <use DiscrContour.jpg>
+Package pdftex.def Info: DiscrContour.jpg used on input line 385.
+(pdftex.def)             Requested size: 198.74312pt x 111.51697pt.
+
+<ContContour.jpg, id=123, 361.35pt x 202.7575pt>
+File: ContContour.jpg Graphic file (type jpg)
+ <use ContContour.jpg>
+Package pdftex.def Info: ContContour.jpg used on input line 389.
+(pdftex.def)             Requested size: 198.74312pt x 111.51697pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<ComparativeMu.jpg, id=124, 361.35pt x 237.88875pt>
+File: ComparativeMu.jpg Graphic file (type jpg)
+ <use ComparativeMu.jpg>
+Package pdftex.def Info: ComparativeMu.jpg used on input line 401.
+(pdftex.def)             Requested size: 198.74312pt x 130.8392pt.
+
+<ComparativeR.jpg, id=125, 361.35pt x 238.8925pt>
+File: ComparativeR.jpg Graphic file (type jpg)
+ <use ComparativeR.jpg>
+Package pdftex.def Info: ComparativeR.jpg used on input line 405.
+(pdftex.def)             Requested size: 198.74312pt x 131.39127pt.
+
+<ComparativeC.jpg, id=126, 361.35pt x 237.88875pt>
+File: ComparativeC.jpg Graphic file (type jpg)
+ <use ComparativeC.jpg>
+Package pdftex.def Info: ComparativeC.jpg used on input line 409.
+(pdftex.def)             Requested size: 198.74312pt x 130.8392pt.
+
+<ComparativeSigma.jpg, id=127, 361.35pt x 238.8925pt>
+File: ComparativeSigma.jpg Graphic file (type jpg)
+
+<use ComparativeSigma.jpg>
+Package pdftex.def Info: ComparativeSigma.jpg used on input line 413.
+(pdftex.def)             Requested size: 198.74312pt x 131.39127pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[29] [30 <C:/Data/School/MFF/Diplomka/!!! Text/Amster/DiscrContour.jpg> <C:/Dat
+a/School/MFF/Diplomka/!!! Text/Amster/ContContour.jpg> <C:/Data/School/MFF/Dipl
+omka/!!! Text/Amster/ComparativeMu.jpg> <C:/Data/School/MFF/Diplomka/!!! Text/A
+mster/ComparativeR.jpg> <C:/Data/School/MFF/Diplomka/!!! Text/Amster/Comparativ
+eC.jpg> <C:/Data/School/MFF/Diplomka/!!! Text/Amster/ComparativeSigma.jpg>])
+("C:\Data\School\MFF\Diplomka\!!! Text\Amster\Appendix.tex" [31
+
+]
+Appendix A.
+[32
+
+]
+Appendix B.
+
+Package amsmath Warning: Foreign command \atopwithdelims;
+(amsmath)                \frac or \genfrac should be used instead
+(amsmath)                 on input line 78.
+
+[33
+
+] [34]
+Appendix C.
+
+Underfull \hbox (badness 10000) in paragraph at lines 103--106
+
+ []
+
+) ("C:\Data\School\MFF\Diplomka\!!! Text\Amster\Reference.tex" [35
+
+]
+Underfull \hbox (badness 1735) in paragraph at lines 21--22
+[]\OT1/cmr/m/n/12 Howard R.A., Math-e-son J.E., (1960), ``Risk-Sensitive Markov
+ De-ci-sion
+ []
+
+) [36
+
+
+] ("C:\Data\School\MFF\Diplomka\!!! Text\Amster\Base.aux")
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 3455 strings out of 494049
+ 45431 string characters out of 3148532
+ 116570 words of memory out of 3000000
+ 6651 multiletter control sequences out of 15000+200000
+ 18789 words of font info for 72 fonts, out of 3000000 for 9000
+ 715 hyphenation exceptions out of 8191
+ 27i,20n,24p,1159b,323s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Pr
+ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Fi
+les/MiKTeX 2.9/fonts/type1/public/amsfonts/cmextra/cmex8.pfb><C:/Program Files/
+MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmitt10.pfb><C:/Program Files/MiKTeX 
+2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/font
+s/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
+public/amsfonts/cm/cmmi6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/am
+sfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
+/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmib10.
+pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/P
+rogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Fi
+les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTe
+X 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/font
+s/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pu
+blic/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/ams
+fonts/cm/cmsy6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
+cmsy7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb
+><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Pro
+gram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb><C:/Program Fil
+es/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt8.pfb><C:/Program Files/MiKTeX
+ 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on Base.pdf (38 pages, 493527 bytes).
+PDF statistics:
+ 227 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 46 words of extra memory for PDF output out of 10000 (max. 10000000)
+

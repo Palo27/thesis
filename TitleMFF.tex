@@ -1,0 +1,111 @@
+\thispagestyle{empty}
+\begin{titlepage}
+\begin{center}
+\ \\
+
+\vspace{5mm}
+
+\large
+{\bf Univerzita Karlova v Praze}\\
+\vspace{3mm}
+{\bf Matematicko-fyzikální fakulta}\\
+
+\vspace{14mm}
+
+{\Large\bf DIPLOMOVÁ PRÁCE}
+
+\vspace{10mm}
+
+%%% Aby vlo¾ní loga v¹e správnì fungovalo, je tøeba mít soubor logo.eps nahranı v pracovním adresáøi,
+%%% tj. v adresáøi, kde se nachází pøekládanı zdrojovı soubor. Soubor logo.eps je mo¾né získat napø.
+%%% na adrese: http://www.mff.cuni.cz/fakulta/symboly/logo.eps
+
+\includegraphics[scale =0.4] {Logo_MFF.jpg}
+%\includegraphics[scale=0.3]{logo.eps}
+%{G:/School/MFF/Bakalarka/Bodove procesy/
+
+\vspace{15mm}
+
+%\normalsize
+{\Large Pavol Stanek}\\ % doplòte va¹e jméno
+\vspace{5mm}
+{\Large\bf Exponenciální øízení homogenních markovskıch procesù}\\ % doplòte název práce
+\vspace{5mm}
+Katedra pravdìpodobnosti a matematické statistiky\\ % doplòte název katedry èi ústavu
+\end{center}
+\begin{center}
+\large
+\begin{align*}
+\noindent \text{Vedoucí diplomové práce: }& \text{Mgr. Peter Dostál Ph.D.}\\ % doplòte odpovídající 
+\vspace{2mm} 
+\noindent \text{Studijní program: }& \text{Matematika}\\
+\vspace{2mm} 
+\noindent \text{Studijní obor: }& \text{Pravdìpodobnost, matematická statistika }\\
+                                & \text{a ekonometrie}% doplòte odpovídající údaje
+\end{align*}
+
+\vspace{\fill}
+
+Praha 2012
+\end{center}
+
+\end{titlepage} % zde konèí úvodní strana
+
+\thispagestyle{empty}
+\normalsize % nastavení normální velikosti fontu
+\setcounter{page}{2} % nastavení èíslování stránek
+\ \vspace{10mm} 
+
+\noindent Rád by som na tomto mieste poïakoval Mgr. Peterovi Dostálovi Ph.D za
+cenné rady, èas a ochotu, ktorú mi venoval pri tvorbe tejto práce. %Ïalej by som rád poïakoval Dr. D. Klementovi za poskytnutie dát z neurofyziologického experimentu.
+ % doplòte vlastní text
+
+\vspace{\fill} % nastavuje dynamické umístìní následujícího textu do spodní èásti stránky
+\noindent Prohlašuji, e jsem tuto diplomovou práci vypracoval samostatnì a vıhradnì s pouitím citovanıch pramenù, literatury a dalších odbornıch zdrojù.\\
+\\
+\noindent Beru na vìdomí, e se na moji práci vztahují práva a povinnosti vyplıvající ze zákona è. 121/2000 Sb., autorského zákona v platném znìní, zejména skuteènost, e Univerzita Karlova v Praze má právo na uzavøení licenèní smlouvy o uití této práce jako školního díla podle § 60 odst. 1 autorského zákona.\\
+\\
+\noindent V Praze dne 3.8.2012 \hspace{\fill}Pavol Stanek\\ % doplòte patøièné datum, jméno a pøíjmení
+
+%%%   Vıtisk pak na tomto míste nezapomeòte PODEPSAT!
+%%%  
+                                      
+%\tableofcontents % vkládá automaticky generovanı obsah dokumentu
+\setcounter{page}{1}
+
+\newpage % pøechod na novou stránku
+\addcontentsline{toc}{chapter}{\protect\numberline{}Abstract}
+%\chapter*{Abstract}
+%%% Následuje strana s abstrakty. Doplòte vlastní údaje.
+%\noindent
+%Název práce: Risk-Sensitive Control\\
+%Autor: Pavol Stanek\\
+%Katedra (ústav): Katedra pravdìpodobnosti a metematické statistiky\\
+%Vedoucí bakaláøské práce: Mgr. Peter Dostal Ph.D.\\
+%e-mail vedoucího: dostal@karlin.mff.cuni.cz\\
+
+\noindent
+Název práce: Exponenciální øízení homogenních markovskıch procesù\\
+Autor: Pavol Stanek\\
+Katedra/Ústav: Katedra pravdìpodobnosti a matematické statistiky MFF UK\\
+Vedoucí diplomové práce: Mgr. Peter Dostál Ph.D., Katedra pravdìpodobnosti a matematické statistiky MFF UK\\
+%Supervisor's e-mail address: benesv@karlin.mff.cuni.cz\\
+\\
+\noindent Abstrakt: Táto diplomová práca sa zaoberá exponenciálnym riadením markovskıch reazcov. V práci je odvodenı iteraènı algoritmus na nájdenie riadenia, ktoré maximalizuje mieru rastu oèakávaného úitku. Úitok je meranı exponenciálnou úitkovou funkciou. Algoritmus je odvodenı pre reazce v diskrétnom aj spojitom èase. Vıslednı algoritmus je následne aplikovanı na problém optimálneho riadenia portfólia pri proporcionálnych transakènıch nákladoch. Je odvodená dynamika vıvoja investorovej pozície. Vıslednı proces je approximovanı markovskım reazcom. Pouitím iteraèného algoritmu je numericky nájdená optimálna obchodná stratégia.\\
+\\
+\noindent Klíèová slova: exponenciálne riadenie, markovskı reazec, optimalizácia porfólia, proporcionálne transakèné náklady
+
+\vspace{\fill}
+
+\noindent Title: Exponential control of homogeneous Markov processes\\
+Author: Pavol Stanek\\
+Department: Department of Probability and Mathematical Statistics, MFF UK\\
+Supervisor: Mgr. Peter Dostál Ph.D., Department of Probability and Mathematical Statistics, MFF UK\\
+%Supervisor's e-mail address: benesv@karlin.mff.cuni.cz\\
+\\
+\noindent Abstract: This master thesis concerns exponential control of Markov decision chains.
+An iterative alghorithm for finding a control, that maximizes a long term growth rate of expected utility is developed. The utility is measured by exponential utility function. The algorithm is derived for both discrete time and continuous time chain. Subsequently, the results are applied on the problem of optimally managing portfolio with proportional transaction  costs. The dynamics of the investor's position is derived and the consequent process is approximated by Markov chain. Using the iterative alghorithm, the optimal trading strategy is numerically found.\\
+\\
+\noindent Keywords: exponential control, Markov chain, portfolio optimization, proportional transaction costs
+\newpage
+\tableofcontents

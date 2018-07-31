@@ -1,0 +1,93 @@
+\documentclass[a4paper,12pt]{report}
+
+\usepackage[cp1250]{inputenc}
+%\usepackage[czech]{babel}
+
+\usepackage{graphicx}
+\usepackage{amsmath,amsthm}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{subfigure}
+%\usepackage{subfloat}
+\usepackage[usenames]{color}
+%\usepackage[left=3.2cm,right=3.2cm,bottom=4.1cm,top=3.2cm]{geometry} 
+\usepackage[left=3.5cm,right=2.5cm,bottom=4cm,top=3cm]{geometry} 
+\usepackage{multirow}
+\usepackage{enumerate}
+\usepackage{epsfig}
+\usepackage{accents}
+\usepackage{verbatim}
+\usepackage{easybmat}
+\usepackage[titletoc]{appendix}
+\usepackage{scrextend} %indenting
+\usepackage{color}
+
+\newlength{\dwidehatheight}
+\newcommand{\doublewidehat}[1]{%
+    \settoheight{\dwidehatheight}{\ensuremath{\widehat{#1}}}%
+    \addtolength{\dwidehatheight}{-0.35ex}%
+    \widehat{\vphantom{\rule{1pt}{\dwidehatheight}}%
+    %\hat{\vphantom{\rule{1pt}{\dhatheight}}
+    %\widehat{\hphantom{\rule{1pt}{5.5pt}{\dwidehatheight}}%
+    \smash{\widehat{#1}}}}
+    
+\newcommand{\bm}[1]{\mbox{\boldmath{$#1$}}}
+\newcommand{\sm}[1]{\mbox{\small{$#1$}}}
+\newcommand{\ft}[1]{\mbox{\footnotesize{$#1$}}}
+\newcommand{\ui}[1]{^{_{#1}}}
+\newcommand{\li}[1]{_{^{#1}}}
+\newcommand{\tr}{^{^{_\texttt T}}}
+\newcommand{\diag}{\mathrm{diag}}
+\setlength{\parindent}{10pt}
+\numberwithin{equation}{chapter}
+
+\newcommand{\assleq}{\, \mbox{$_{^{^\leq}}^{\hspace{-0mm}^{_{\textrm{as}}}\hspace{0.3mm}}$\ }}
+\newcommand{\asleq}{\raisebox{0.5mm}{$\ _\leq$}\hspace{-2.4mm}\raisebox{1.7mm}{$^{_{_{_\textrm{as}}}}$}}
+\newcommand{\asgeq}{\raisebox{0.5mm}{$\ _\geq$}\hspace{-2.4mm}\raisebox{1.7mm}{$^{_{_{_\textrm{as}}}}$}}
+\newcommand{\aseq}{\ \mbox{$=^{\hspace{-2.7mm}^{_{\textrm{as}}}\hspace{0.3mm}}$\ }}
+\newcommand{\aeeq}{\ \mbox{$=^{\hspace{-2.8mm}^{_{\textrm{ae}}}\hspace{0.3mm}}$\ }}
+\newcommand{\aeaseq}{\ \mbox{$=^{\hspace{-2.7mm}^{_{\textrm{as}}}\hspace{0.3mm}} \raisebox{-2mm}{$\hspace{-4.5mm}^{_{\textrm{ae}}}\hspace{1.3mm}$}$\ }}
+
+\newtheorem{thm}{Theorem}[chapter]
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{cor}[thm]{Corollary}
+\theoremstyle{definition}
+\newtheorem{df}[thm]{Definition}
+
+% Tato makra pøesvìdèují mírnì ošklivým trikem LaTeX, aby hlavièky kapitol
+% sázel pøíèetnìji a nevynechával nad nimi spoustu místa. Smìle ignorujte.
+\makeatletter
+\def\@makechapterhead#1{
+  {\parindent \z@ \raggedright \normalfont
+   \Huge\bfseries \thechapter. #1
+   \par\nobreak
+   \vskip 40\p@
+}}
+\def\@makeschapterhead#1{
+  {\parindent \z@ \raggedright \normalfont
+   \Huge\bfseries #1
+   \par\nobreak
+   \vskip 40\p@
+}}
+\makeatother
+
+\title{}
+\author{Pavol Stanek}
+
+\begin{document}
+
+%\input{Title}
+\input{TitleMFF}
+
+\input{Chapter1}
+
+\input{Chapter2}
+
+\input{Appendix}
+
+%\input{Code}
+
+\input{Reference}
+
+\end{document}

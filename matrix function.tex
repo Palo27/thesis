@@ -1,0 +1,25 @@
+\begin{df}
+Let $\bm{A}$ be a square matrix with complex entries. Assume that $\lambda_1,\lambda_2\dots,\lambda_k$ is the spectrum of $\bm{A}$ and a complex function $f$ is defined on spectrum of $\bm{A}$. Than we define
+\[f(\bm{A})=p(\bm{A}), \]
+where $p$ is a polymonial satisfying $p(\lambda_i)=f(\lambda_i)$ for all $i=1,\dots,k$.
+\end{df} 
+\begin{thm}[spectral mapping theorem]
+\label{SpecralMapping}
+If $\lambda_1,\lambda_2,\dots,\lambda_k$ are the eigenvalues of the matrix $\bm{A}$ and the function $f$ is defined on the spectrum of $\bm{A}$, then the eigenvalues of $f(\bm{A})$ are $f(\lambda_1),f(\lambda_2),\dots,f(\lambda_k)$.
+\end{thm}
+\begin{cor}
+\label{corApp}
+If the matrix $\bm{A}$ has an eigen value $\lambda$ with corresponding eigenvector $\bm{v}$, then $\bm{v}$ is also an eigenvetor of the matrix $f(\bm{A})$ corresponding to the eigenvalue $f(\lambda)$.
+\begin{proof}
+\[ 
+f(\bm{A})\,\bm{v}=p(\bm{A})\,\bm{v}=\sum a_n \, \bm{A}^n \, \bm{v} =\sum a_n \, \lambda^n \, \bm{v} = p(\lambda)\,\bm{v}=f(\lambda)\,\bm{v} \qedhere
+\]
+\end{proof}
+\end{cor}
+\begin{prop}
+\label{propB4}
+Consider the matrix $\bm{A}$ for which any real power is defined. Then $\bm{A}\,\bm{v}=\lambda\,\bm{v}$ implies $\bm{A}^s\,\bm{v}=\lambda^s\,\bm{v}$ for all $s\geq0$.
+\end{prop}
+\begin{proof}
+Taking $f(x)=x^s$ the proposition follows from Theorem \ref{SpecralMapping} and Corollary \ref{corApp}.
+\end{proof}

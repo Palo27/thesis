@@ -1,0 +1,243 @@
+%\appendix
+%\renewcommand\chaptername{Appendix}
+%\addcontentsline{toc}{chapter}{Appendices}
+%\renewcommand\thesection{Appendix \Alph{section}}
+\begin{appendices}
+
+\chapter{Perron-Frobenius Theory}
+In this section we summarize the results of Perron-Frobenius theory about non-negative matrices that is used throughout the thesis. Comprehensive explanation of the topic can be found in monograph by Lancaster and Tismenetsky \cite{Lancaster} in Chapter 15.
+
+Let $\bm{A}$ be a square $n\times n$ matrix with non-negative entries. We denote this fact by $A\geq0$.
+\begin{df}
+Let $d_j$ be the greatest common divisor of those $m\geq1$ for which $\bm{A}^m_{jj}>0$. If $d_j=1$ for all $j=1,\dots,n$ then the matrix $\bm{A}$ is called {\em aperiodic}. 
+\end{df}
+\begin{df}
+The square matrix $\bm{A}$ of order $n$ is called {\em irreducible} if for every permutation matrix $\bm{R}$
+\[ \bm{R}\,\bm{A}\,\bm{R}^{-1}\neq\left( \begin{array}{cc}
+\bm{C} & \bm{0}  \\
+\bm{D} & \bm{F}  \\
+\end{array} \right), \] 
+where \bm{C} and \bm{F} are square matrices of order $2$ at least.
+\end{df}
+\noindent These terms are directly related to the same terms defined for Markov chains. If $X$ is a Markov chain with transition matrix $\bm{P}$, then $X$ is aperiodic iff \bm{P} is aperiodic, and $X$ is irreducible iff \bm{P} is irreducible.
+
+\begin{thm}[Perron-Frobenius] 
+\label{PF}
+Let $\bm{A}$ be a nonnegative, irreducible and aperiodic square matrix. Then there exists a real eigenvalue $\lambda_1>0$ of $\bm{A}$, such that $\lambda_1>|\lambda|$ for all other eigenvalues of $\bm{A}$. Moreover, (right) eigenvector $\bm{v}$ respective to $\lambda_1$ can be chosen entrywise positive and $\text{ker}(\bm{A}-\lambda\bm{I})$ is onedimensional. The same holds for a left eigenvalue $\bm{w}$, that is for a eigenvector of $\bm{A}\tr$ respective to $\lambda_1$.
+\end{thm}
+
+\begin{thm} 
+\label{PFlimit}
+Let $\bm{A}$ be a nonnegative, irreducible and aperiodic square matrix. Let $\lambda>0$ be its maximal eigenvalue given by Perron-Frobenius theorem. Then
+$$\lim_{k\rightarrow\infty}{\lambda^{-k}}\bm{A}^k=\frac{\bm{v}\,\bm{w}\tr}{\bm{v}\tr\,\bm{w}}$$%=\bm{v}\,\frac{\sum_{i} w_i}{\sum_i v_i\, w_i}=k(\bm{v},\bm{w})\,\bm{v},$$
+where $\bm{v}$ is any right eigenvector and $\bm{w}$ is any left eigenvector of $\bm{A}$ respective to $\lambda$. %If $\bm{v}$ is choosen positive, then the constant $k(\bm{v},\bm{w})$ is also positive.
+\end{thm}
+Note that if $\bm{v}$ is chosen positive, then 
+$$\lim_{k\rightarrow\infty}{\lambda^{-k}}\bm{A}^k\,\bm{1}=\frac{\sum_{i} w_i}{\sum_i v_i\, w_i}\,\bm{v}=k(\bm{v},\bm{w})\,\bm{v},$$
+where $k(\bm{v},\bm{w})$ is a positive constant.
+
+\begin{thm}
+\label{ineq}
+Let $\bm{A}$ be a nonnegative, ireducible square matrix. Let $\lambda>0$ be its maximal eigenvalue and let $\bm{v}$ be a positive vector. Then following inequality holds
+\begin{equation*}
+\min_i \frac{\sum_j a_{ij}\,v_j}{v_i}\leq\lambda\leq\max_i \frac{\sum_j a_{ij}\,v_j}{v_i}
+\end{equation*}
+and the inequality with equality sign holds if and only if $\bm{v}$ is an eigenvector of $\bm{A}$ respective to $\lambda$.
+\end{thm} 
+
+\begin{comment}
+\begin{lem}
+\label{TtoS}
+Let \bm{S}=\exp{\bm{T}}. Let $\kappa_1$ be a maximal egenvalue of $\bm{T}$, that is the one with maximal Eeuclidean norm. Then $e^{\kappa_1}=\lamba_1$ is a maximal eigenvalue of $\bm{S}$. Moreover eigenspace of $\bm{T}$ corresponding to $\mu$ coincides with eigenspace of $\bm{S}$ corresponding to $\lambda$
+\end{lem}
+\begin{proof}
+Note that the 
+$$\mu^a=\underset{u\in\mathcal{A}}{\operatorname{argman}}\|{mu|\}$$
+\end{proof}
+\end{comment}
+
+\chapter{Matrix Exponential Function}
+
+Here we summarize some facts about the matrix exponential that we used in Section 1.5. Particularlly, we are interested in its eigenvalues and eigenvectors.
+
+Let $\bm{A}$ be a square $n \times n$ matrix. Define a matrix function on $[0,\infty)$ by
+\begin{equation}
+\label{MexpDef}
+\exp\{u\,\bm{A}\}\triangleq \sum_{k=0}^{\infty}\frac{(u\,\bm{A})^k}{k!}.
+\end{equation}  
+We will assume that $\bm{A}$ has $n$ distinct eigenvalues $\lambda_1,\dots,\lambda_n$, i.e. the Jordan canonical form of \bm{A} is of the form
+\[\bm{D}\triangleq\text{diag}(\{\lambda_i\}).\]
+This simplifying assumtion hepls us to clearly demonstrate the idea behind. However, note that all the results that will be stated hold also for general case. The methods used for general case are similar, but considering the general Jordan canonical form the notation becomes more technical. For fully rigorous treatment see \cite{Baker}. 
+
+%form assumtion demostrate the idea All the result ho is similar but more technical considering However all the result holds hold for all the results Suppose that $\bm{A}$ has $n$ distinct eigenvalues $\lambda_1,\dots,\lambda_n$. Denote the Jordan form of the matrix $\bm{A}$ by $\bm{D}$. That is, there exists a regular matrix $\bm{P}$ such that 
+%\[\bm{A}=\bm{P}\,\bm{D}\,\bm{P}^{-1}, \quad \bm{D}=\text{diag}(\{\lambda_i\}).\] demostrate the The crucial result for us is that matrix exponential leaving the corresponding eigenspace unchanged is that
+
+Using the Jordan canonical form the matrix $\bm{A}$ can be decomposed to $\bm{P}\,\bm{D}\,\bm{P}^{-1}$ for some matrix $\bm{P}$.  Note that 
+\[\bm{A}^2=\bm{P}\,\bm{D}\,\bm{P}^{-1}\,\bm{P}\,\bm{D}\,\bm{P}^{-1}=\bm{P}\,\bm{D}^2\,\bm{P}^{-1}.\]
+So by induction we have $\bm{A}^k=\bm{P}\,\bm{D}^k\,\bm{P}^{-1}$ for $k\in\mathbb{N}$. Then the power series in \ref{MexpDef} can be expressed as
+\begin{align*}
+\exp\{u\,\bm{A}\}&= \sum_{k=0}^{\infty}\frac{1}{k!}u^k\,\bm{P}\,\bm{D}^k\,\bm{P}^{-1}\\
+&=\bm{P}\,\left(\sum_{k=0}^{\infty}\frac{u^k\,\bm{D}^k}{k!}\right)\,\bm{P}^{-1}\\
+&=\bm{P}\,\exp\{u\,\bm{D}\}\,\bm{P}^{-1},
+\end{align*}
+where
+\[\exp\{u\,\bm{D}\}\triangleq\text{diag}(\{e^{u\,\lambda_i}\}).\]
+This shows the existence of $\exp\{u\,\bm{A}\}$. As $\exp\{u\,\bm{D}\}$ is the Jordan canonical form of $\bm{D}$, the eigenvalues of $\bm{D}$ are $e^{u\,\lambda_1},\dots,e^{u\,\lambda_n}$. 
+Moreover, if $\bm{v}$ is an eigenvector of $\bm{A}$ corresponding to $\lambda_i$, then
+\[\exp\{u\,\bm{A}\}\bm{v}=\sum_{k=0}^{\infty}\frac{u^k\,\bm{A}^k\,\bm{v}}{k!}=\sum_{k=0}^{\infty}\frac{u^k\,\lambda_i^k\,\bm{v}}{k!}=e^{\lambda_i}\,\bm{v}.\]
+Consequently, the eigenspace of $\bm{A}$ corresponding to $\lambda_i$ is identical to the eigenspace of $\exp\{\bm{A}\}$ corresponding to $e^{\lambda_i}$. 
+
+%matrix is replaced by general Jordan form matrix
+%the eigenvalues of the matrix $\bm{D}$ $\exp\{u\,\bm{A}\}$.
+%spectrum of $\\bm{A}$
+%All results holds.. technical, see..  
+
+\chapter{A Matrix Result}
+
+Here is the technical Lemma that is used in the proof of the Proposition \ref{propC}. The idea behind the proof is just a direct use of Taylor expansion.
+
+We start with the definition of a matrix norm that we will use.
+\begin{df}
+Let $\bm{A}$ be a square $n \times n$ matrix. Define the matrix \textit{operator norm} by
+\[\left\|\bm{A}\right\|=\max\{ \left\|\bm{A}\,\bm{x}\right\|:\left\|\bm{x}\right\|\leq 1\},\]
+where $\bm{x}\in\mathbb{R}^n$ and $\left\|\bm{x}\right\|=\underset{i}{\max} \,|x_{i}|$.
+\end{df}
+\noindent For any non-zero vector $\bm{x}$ we have $\|\bm{A}\,\tfrac{\bm{x}}{\left\|\bm{x}\right\|}\|\leq \left\|\bm{A}\right\|$ and thus $\left\|\bm{A}\,\bm{x}\right\|\leq \left\|\bm{A}\right\|\left\|\bm{x}\right\|$. Employing this inequality we get
+\[\left\|\bm{A}\,\bm{B}\,\bm{x}\right\|\leq\left\|\bm{A}\right\|\,\left\|\bm{B}\,\bm{x}\right\|\leq\left\|\bm{A}\right\|\,\left\|\bm{B}\right\|\,\left\|\bm{x}\right\|,\]
+and consequently
+\begin{equation}
+\label{ineq}
+\left\|\bm{A}\,\bm{B}\right\|\leq \left\|\bm{A}\right\|\,\left\|\bm{B}\right\|.
+\end{equation}
+
+%Now we proceed to the Lemma.
+%\begin{prop}
+
+%\end{prop}
+
+\begin{lem}
+\label{MatrixResult}
+Let $\bm{A}$, $\bm{B}$ and $\bm{C}$ be square $n \times n$ matrices. Let entries of the main diagonal of the matrix $\bm{C}$ be equal to $1$, e.i. $c_{ii}=1$. Then
+$$\lim_{n\rightarrow\infty}\left[\big(\exp\{\tfrac{1}{n}\,\bm{A}\}\cdot\exp\{\tfrac{1}{n}\,\bm{B}\}\big) \ast \bm{C}\right]^n=\exp\{(\bm{A}+\bm{B})\ast\bm{C}\}.$$
+%$$[\exp\{\tfrac{1}{n}\,\bm{A}\ast \bm{B}\}]^n\longrightarrow \exp\{\bm{A}\ast\bm{B}\}, \quad n\longrightarrow\infty.$$
+\end{lem}
+\begin{proof}
+
+1) First we show that the exponential $\exp\{\tfrac{1}{n}\,\bm{A}\}$ can be well approximated by $\bm{I}+\tfrac{1}{n}\,\bm{A}$, meaning that
+\begin{equation}
+\label{AppB1}
+\exp\{\tfrac{1}{n}\,\bm{A}\}=\bm{I}+\tfrac{1}{n}\,\bm{A}+O\left(\tfrac{1}{n^2}\right), \quad n\longrightarrow\infty.
+\end{equation}
+It is sufficient to show that $\bm{H}(t)=t^{-2}(\exp\{\bm{A}t\}-\bm{I}-\bm{A}\,t)$ converges to some finite matrix as $t$ goes to zero. Using L' Hospital's rule twice we get
+$$\frac{d\,\bm{H}(t)}{d^2\,t}=\tfrac{1}{2}\,\bm{A}^2\,\exp\{\bm{A}\,t\}\longrightarrow\tfrac{1}{2}\,\bm{A}^2, \quad t\longrightarrow 0.$$
+2) The relation \eqref{AppB1} implies
+\begin{equation}
+\label{AppB2}
+\exp\{\tfrac{1}{n}\,\bm{A}\}\cdot\exp\{\tfrac{1}{n}\,\bm{B}\}=\bm{I}+\tfrac{1}{n}\,(\bm{A}+\bm{B})+O\left(\tfrac{1}{n^2}\right), \quad n\longrightarrow\infty.
+\end{equation}
+3) Because the main diagonal of the matrix $\bm{C}$ consists of ones, we have $\bm{I}\ast\bm{C}=\bm{I}$. Thus, using the relation \eqref{AppB2} for $n$ going to infinity
+\begin{equation}
+\label{AppB3}
+\begin{split}
+\big(\exp\{\tfrac{1}{n}\,\bm{A}\}\cdot \exp\{\tfrac{1}{n}\,\bm{B}\}\big)\ast \bm{C}&=\left[\bm{I}+\tfrac{1}{n}\,(\bm{A}+\bm{B})+O\left(\tfrac{1}{n^2}\right)\right]\ast\bm{C}\\
+&=\bm{I}+\tfrac{1}{n}\,\bm{E}+O\left(\tfrac{1}{n^2}\right),
+\end{split}
+\end{equation}
+where $\bm{E}=(\bm{A}+\bm{B})\ast\bm{C}$.\\
+4) Finally we show the convergence. Define sequence
+\[ \bm{D}_n=\big(\exp\{\tfrac{1}{n}\,\bm{A}\}\cdot \exp\{\tfrac{1}{n}\,\bm{B}\}\big)\ast \bm{C}-\bm{I}+[\tfrac{1}{n}\,[(\bm{A}+\bm{B})\ast\bm{C}]], \]
+which is according to \eqref{AppB3} $O\left(\tfrac{1}{n^2}\right)$. Using the binomial theorem we get 
+\begin{align*}
+\left[\big(\exp\{\tfrac{1}{n}\,\bm{A}\}\cdot\exp\{\tfrac{1}{n}\,\bm{B}\}\big)\ast \bm{C}\right]^n&=[(\bm{I}+\tfrac{1}{n}\,(\bm{A}+\bm{B})\ast\bm{C})+\bm{D}_n]^n\\
+&=\left[\bm{I}+\tfrac{1}{n}\,\bm{E}\right]^n+\sum_{k=1}^n {{n}\choose{k}}\,\bm{D}_n^k\,\left(\bm{I}+\tfrac{1}{n}\bm{E}\right)^{n-k}.
+\end{align*}
+We tend to show that the second term is negligible. 
+Then using the triangle inequality and \eqref{ineq} we get
+%, because the term $[\bm{I}+\tfrac{1}{n}(\bm{A}\ast\bm{B})]^{n-k}$ converges to a finite limit and
+%\[ \sum_{k=1}^n {{n}\choose{k}}\,\bm{C}_n^k \leq \sum_{k=1}^n \frac{n^k}{k!}\,\bm{C}_n^k=o(1) \]
+\begin{align*}
+\left\|\sum_{k=1}^n {{n}\choose{k}}\,\bm{D}_n^k\,\left(\bm{I}+\tfrac{1}{n}\bm{E}\right)^{n-k}\right\|
+&\leq \sum_{k=1}^n {{n}\choose{k}}\,\left\|\bm{D}_n\right\|^k\,\left(\left\|\bm{I}\right\|+\tfrac{1}{n}\left\|\bm{E}\right\|\right)^{n-k}\\
+&=\left\|\bm{D}_n\right\|\,\sum_{l=0}^{n-1} {{n-1}\choose{l+1}}\,\left\|\bm{D}_n\right\|^l\,\left(1+\tfrac{1}{n}\left\|\bm{E}\right\|\right)^{n-1-l}\\
+&\leq n\,\left\|\bm{D}_n\right\|\,\sum_{l=0}^{n-1} {{n-1}\choose{l}}\,\left\|\bm{D}_n\right\|^l\,\left(1+\tfrac{1}{n-1}\left\|\bm{E}\right\|\right)^{n-1-l}\\
+&=(n\,\left\|\bm{D}_n\right\|)\,(1+\left\|\bm{D}_n\right\|+\tfrac{1}{n-1}\left\|\bm{E}\right\|)^{n-1}.  
+\end{align*}
+First factor converges to $0$ as $\bm{D}_n$ is $O(\tfrac{1}{n^2})$. The second term converges to $\exp\{\left\|\bm{E}\right\|\}$, e.i. finite number. Thus the whole term converges to $0$. 
+%The second summand is negligible, 
+%\begin{align*} \sum_{k=1}^n {{n}\choose{k}}\, O\left(\tfrac{1}{n^2}\right)^k\, \left(\bm{I}+\tfrac{1}{n}(\bm{A}\ast\bm{B})\right)^{n-k}&=\sum_{k=1}^n \tfrac{n\,(n-1)\dots(n-k+1)}{k!} \, O\left(\tfrac{1}{n^{2k}}\right)\,O(1)\\
+%&\leq \sum_{k=1}^n \tfrac{n^k}{k!}\, O\left(\tfrac{1}{n^{2k}}\right)=\sum_{k=1}^n O\left(\tfrac{1}{n^k}\right)=o(1).
+%\end{align*}
+We can conclude
+\begin{align*}
+\left[\big(\exp\{\tfrac{1}{n}\,\bm{A}\}\cdot\exp\{\tfrac{1}{n}\,\bm{B}\}\big)\ast \bm{C}\right]^n&=[(\bm{I}+\tfrac{1}{n}\,(\bm{A}+\bm{B})\ast\bm{C})]^n+o(1)\\
+&\longrightarrow\exp\{(\bm{A}+\bm{B})\ast\bm{C}\},\quad n\longrightarrow\infty.\qedhere
+\end{align*}
+%\begin{align*}
+%$$ \sum_{k=1}^n {{n}\choose{k}}\, O\left(\tfrac{1}{n^2}\right)^k\, \left(\bm{I}+\tfrac{1}{n}(\bm{A}\ast\bm{B})\right)^{n-k}=\sum_{k=1}^n \tfrac{n\,(n-1)\dots(n-k+1)}{k!} \, O\left(\tfrac{1}{n^2k}\right)\,\left(\bm{I}+\tfrac{1}{n}(\bm{A}\ast\bm{B})\right)^{n-k}  $$
+%\leq \sum_{k=1}^n \frac{n^k}{k!} \, %O\left(\tfrac{1}{n^2}\right)^k\,\left(\bm{I}+\tfrac{1}{n}(\bm{A}\ast\bm{B})\right)^{n-k}\\
+%&=22
+%\end{align*}
+\end{proof}
+
+\chapter{Stochastic calculus}
+In this section we only introduce basic stochastic calculus tools that we use in Chapter 2. These are Ito's formula for computing the differential of a process and Girsanov Theorem. The whole stochastic calculus is a complex mathematical theory while deeper insight is out of the scope of this thesis. Readable but sufficiently rigorous explanation of the topic can be found for instance in monograph \cite{Shreve}.\\
+%quadratic variation
+%Ito
+\begin{thm}[Ito's Formula] 
+\label{ItoThm}
+Let $f:\mathbb{R}\rightarrow\mathbb{R}$ be a twice continuously differentiable function and let $X=(X_t,t\geq0)$ be a real-valued continuous semimartingale. Then
+\begin{equation}
+\label{ItoFormula}
+f(X_t)=f(X_0)+\int_0^t f^{\prime}(X_s)\mathrm{d}X_s+\int_0^t f^{\prime\prime}(X_s)\mathrm{d}\langle X,X \rangle_s.
+\end{equation}
+%$\int_{0}^t X_s \mathrm{d} < \infty$ almost surely for all $t>0$.
+\end{thm}
+\noindent We can reformulate the equation \eqref{ItoFormula} using the differential notation in a following way,
+\begin{equation}
+\label{ItoFormula2}
+\mathrm{d}f(X_t)=f^{\prime}(X_t)\mathrm{d}X_t+f^{\prime\prime}(X_t)\mathrm{d}\langle X\rangle_t.
+\end{equation}
+Here are the two applications of \eqref{ItoFormula2} that are used in the Chapter 2.
+\begin{enumerate}
+\item For $f(x)=\ln(x)$ we have $f^{\prime}(x)=x^{-1}$, $f^{\prime\prime}(x)=-x^{-2}$ and
+\[\mathrm{d}\ln(X_t)=\frac{\mathrm{d}X_t}{X_t}-\frac{\mathrm{d}\langle X\rangle_t}{2X_t^2}.\]
+\item For $f(x)=x^{-1}$ we have $f^{\prime}(x)=-x^{-2}$ $f^{\prime\prime}(x)=2 x^{-3}$ and
+\[\mathrm{d}X_t^{-1}=-\frac{\mathrm{d}X_t}{X_t^2}+\frac{\mathrm{d}\langle X\rangle_t}{X_t^2}.\]
+\end{enumerate}
+
+\begin{comment}
+\begin{thm}[Girsanov Theorem] 
+\label{Girsanov}
+Let $\{\Omega,\mathcal{F},\mathbb{P}\}$ be a probability space with Brownian motion $W_t$. Let be $\{\mathcal{F}_t^{W}\}$ the filtration generated by the Brownian motion $W$. Let $(X_t,t\geq 0)$ be an $\{\mathcal{F}_t^{W}\}$-martingale with bounded trajectories.
+%\[\mathbb{E}[\exp\{\int_0^t X^2_t \mathrm{d}\}]<\infty, \quad \text{for all } t>0. \]
+ Define stochastic exponential $\mathcal{E}(X)$ by
+\[\mathcal{E}(X)_t=\exp\{X_t-\tfrac{1}{2}\left\langle X \right\rangle_t\}.\]
+Then for any fixed $T>0$ there exist a measure $\mathbb{Q}_{T}$ such that
+\[\frac{\mathrm{d}\mathbb{Q}_T}{\mathrm{d}\mathbb{P}}|_{\mathcal{F}_t^{W}}=\mathcal{E}(X)_t,\quad 0\leq t\leq T.\] %\restriction
+Moreover
+\[\widetilde{W}_t=W_t-\left\langle W,X \right\rangle_t,\quad 0\leq t\leq T.\]
+is a Brownian motion under the measure $\mathbb{Q}_T$.
+\end{thm}
+\end{comment}
+
+We say that the process $G$ satisfies \textit{Novikov condition} on $[0,T]$ if
+\begin{equation}
+\mathbb{E}\left[\exp\Big(\frac{1}{2}\int_0^T G^2_s \,\mathrm{d}s \Big)\right]<\infty.
+\end{equation}
+
+\begin{thm}[Girsanov Theorem] 
+\label{Girsanov}
+Let $(\Omega,\mathcal{F},(\mathcal{F}_t),\mathbb{P})$ be a filtrated probability space satisfying usual conditions (UC). Let $W$ be an ($\mathcal{F}_t$)-martingale and let  $G_t$ be an ($\mathcal{F}_t$)-progressively measeruble process satisfying Novikov condition on every interval $[0,T]$. Put 
+\[X\triangleq\int_0^t G_s \,\mathrm{d}W_s.\]
+%Brownian motion $W_t$. Let be $\{\mathcal{F}_t^{W}\}$ the filtration generated by the Brownian motion $W$. Let $(X_t,t\geq 0)$ be an $\{\mathcal{F}_t^{W}\}$-martingale with bounded trajectories.
+%\[\mathbb{E}[\exp\{\int_0^t X^2_t \mathrm{d}\}]<\infty, \quad \text{for all } t>0. \]
+ Define stochastic exponential $\mathcal{E}(X)$ by
+\[\mathcal{E}(X)_t\triangleq\exp\{X_t-\tfrac{1}{2}\left\langle X \right\rangle_t\}.\]
+Then for any fixed $T>0$ there exist a measure $\mathbb{Q}_{T}$ such that
+\[\frac{\mathrm{d}\mathbb{Q}_T}{\mathrm{d}\mathbb{P}}|_{\mathcal{F}_T}=\mathcal{E}(X)_T.\] %\restriction
+Moreover
+\[\widetilde{W}_t=W_t-\left\langle W,X \right\rangle_t,\quad 0\leq t\leq T.\]
+is a Brownian motion under the measure $\mathbb{Q}_T$.
+\end{thm}
+
+\end{appendices}

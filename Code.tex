@@ -1,0 +1,164 @@
+\chapter{The Program Implementation}   
+
+We implemented continuous time and discrete time alghoritms in Wolfram Mathematica 7.0. Here is the code for both procedures.\\
+\\
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{scriptsize}
+
+h = 0.005; dt = 0.0001; n = 1/h + 1; G = Range[0, 1, h];\\
+\\
+ArgMinList[list2d\_] := Module[\{min, argument, values, output\},
+  \begin{addmargin}[1em]{0em}
+  argument = list2d[[All, 1]];\\
+  values = list2d[[All, 2]];\\
+  min = Min[values];\\
+  If[Count[values, min] == 1, output = argument[[Position[values, min][[1, 1]]]], output = Null];\\
+  output
+  \end{addmargin} 
+]\\
+\\
+\\
+ModelDiscrete[r\_, mu\_, sigma\_, c\_, gamma\_] :=  Module[\{A, B, EigenA, lA, vA\},\\
+
+  \begin{addmargin}[1em]{0em}
+  (*portfolio drift and volatility*)\\
+  b[x\_] := x (1 - x) (mu - r - (sigma\textasciicircum 2) x);\\
+  s[x\_] := sigma x (1 - x);\\
+  \\
+  (*transition matrix*)\\
+  PUp[g\_] := (h b[g] dt + (s[g])\textasciicircum 2 dt )/(2 h\textasciicircum 2);\\
+  PDown[g\_] := (-h b[g] dt + (s[g])\textasciicircum 2 dt )/(2 h\textasciicircum 2);\\
+  PZero[g\_] := 1 - (PUp[g] + PDown[g]) ;\\
+  PRowUp[g\_] := Join[Table[0, \{g/h\}], \{PDown[g], PZero[g], PUp[g]\}, Table[0, \{n - g/h - 3\}]];\\
+  PRowDown[g\_] := Join[Table[0, \{g/h - 2\}], \{PDown[g], PZero[g], PUp[g]\}, Table[0, \{n - (g/h - 2) - 3\}]];\\
+  PRowZero[g\_] := Join[Table[0, \{g/h - 1\}], \{PDown[g], PZero[g], PUp[g]\}, Table[0, \{n - (g/h - 1) - 3\}]];\\
+  PRow[a\_, g\_] := Piecewise[\{\{PRowZero[g], a == 0\}, \{PRowUp[g], a == 1\}, \{PRowDown[g], a == -1\}\}];\\
+  \\
+  (*rewards*)\\
+  RZero[g\_] := (mu + (mu - r) g - 1/2 sigma\textasciicircum 2 g\textasciicircum 2) dt;\\
+  rew[a\_, g\_] :=  Piecewise[\{\{RZero[g] - Abs[Log[1 - c g] - Log[1 - c (g - h)]], a == -1\}, \{RZero[g],
+      \begin{addmargin}[1em]{0em} 
+      a == 0\}, \{RZero[g] - Abs[Log[1 - c g] - Log[1 - c (g + h)]], a == 1\}\}];
+      \end{addmargin}
+  RRow[a\_, g\_] := Table[rew[a, g], \{n\}];\\
+  \\
+  (*interval - policy vector  transformation*)\\
+  aVec[alpha\_, beta\_] := Join[Table[1, \{Round[(alpha + h)/h]\}], Table[0, \{Round[(beta - alpha)/h - 1]\}], Table[-1, \{Round[n - beta/h]\}]];\\
+  aInt[aVec\_] := Union[h (Last[Position[aVec, 1]] - 1), h (First[Position[aVec, -1]] - 1)];\\
+  \\
+  (*S matrix*)\\
+  SRow[a\_, g\_] := PRow[a, g] Exp[-gamma RRow[a, g]];\\
+  S[aVec\_] := MapThread[SRow, \{aVec, G\}];\\
+  \\
+  (*iterative algorithm*)\\
+  A = \{\};\\
+  B = aVec[0, 1]; (*initial policy*)\\
+  LambdaImprovement = \{\};\\
+  PolicyImprovement = \{B\};\\
+  While[A != B,
+     \begin{addmargin}[1em]{0em}
+     A = B;\\
+     B = Table[Null, \{n\}];\\
+     EigenA = Eigensystem[S[A], 1];\\
+     lA = EigenA[[1, 1]];\\
+     vA = EigenA[[2, 1]];\\
+     vA = vA/Last[vA];\\
+     B[[1]] = 1;\\
+     B[[2]] = ArgMinList[\{\{0, SRow[0, h].vA\}, \{1, SRow[1, h].vA\}\}];\\
+     For[k = 2, k <= n - 3, k++,
+      \begin{addmargin}[1em]{0em}
+      B[[k + 1]] = ArgMinList[\{\{-1, SRow[-1, k h].vA\}, \{0, SRow[0, k h].vA\}, \{1, SRow[1, k h].vA\}\}];
+      \end{addmargin}
+      ];\\
+     B[[n - 1]] = ArgMinList[\{\{-1, SRow[-1, (n - 2) h].vA\}, \{0, SRow[0, (n - 2) h].vA\}\}];\\
+     If[B[[n - 1]] == Null, B[[2]] = A[[2]]];\\
+     B[[n]] = -1;\\
+     For[k = 1, k <= n, k++, If[B[[k]] == Null, B[[k]] = A[[k]]]];\\
+     PolicyImprovement = Append[PolicyImprovement, B];\\
+     LambdaImprovement = Append[LambdaImprovement, lA];
+     \end{addmargin}
+  ]\\   
+  LambdaImprovement = Append[LambdaImprovement, Eigensystem[S[B], 1][[1, 1]]];\\
+  aInt[PolicyImprovement[[-1]]]
+  ]  
+  \end{addmargin} 
+   
+\end{scriptsize}
+\vspace{0.7cm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\begin{scriptsize} 
+
+ModelContinuous[r\_, mu\_, sigma\_, c\_, gamma\_] := Module[\{A, B, EigenA, lA, vA\},\\
+
+  \begin{addmargin}[1em]{0em}
+  (*portfolio drift and volatility*)\\
+  b[x\_] := x (1 - x) (mu - r - (sigma\textasciicircum 2) x);\\
+  s[x\_] := sigma x (1 - x);\\
+  \\
+  (*transition rate matrix*)\\
+  QUp[g\_] := (h b[g]  + (s[g])\textasciicircum 2  )/(2 h\textasciicircum 2);\\
+  QDown[g\_] := (-h b[g]  + (s[g])\textasciicircum 2  )/(2 h\textasciicircum 2);\\
+  QZero[g\_] := -(QUp[g] + QDown[g]);\\
+  Qmove[g\_] := 100000;\\
+  QRowZero[g\_] :=Join[Table[0, \{g/h - 1\}], \{QDown[g], QZero[g], QUp[g]\}, Table[0, \{n - Max[(g/h - 1), 0] -3\}]];\\
+  QRowUp[g\_] := Join[Table[0, \{g/h\}], \{-Qmove[g], Qmove[g]\}, Table[0, \{n - Max[(g/h - 0), 0] - 2\}]];\\
+  QRowDown[g\_] := Join[Table[0, \{g/h - 1\}], \{Qmove[g], -Qmove[g]\}, Table[0, \{n - Max[(g/h - 1), 0] - 2\}]];\\
+  QRow[a\_, g\_] := Piecewise[\{\{QRowZero[g], a == 0\}, \{QRowUp[g], a == 1\}, \{QRowDown[g], a == -1\}\}];\\
+  \\
+  (*rewards*)\\
+  revZero[g\_] := (mu + (mu - r) g - 1/2 sigma\textasciicircum 2 g\textasciicircum 2) dt;\\
+  rev[a\_, g\_] := Piecewise[\{\{revZero[g] - Abs[Log[1 - c g] - Log[1 - c (g - h)]], a == -1\}, \{revZero[g],
+    \begin{addmargin}[1em]{0em}
+    a == 0\}, \{revZero[g] - Abs[Log[1 - c g] - Log[1 - c (g + h)]], a == 1\}\}];
+    \end{addmargin}
+  RVector[aVec\_] := MapThread[rev, \{aVec, G\}];\\
+  RRow[a\_, g\_] :=  Join[Table[0, g h], rev[a, g], Table[0, n - g h - 1]];\\
+  \\
+  (*interval - policy vector  transformation*)\\
+  aVec[alpha\_, beta\_] := Join[Table[1, \{Round[(alpha + h)/h]\}], Table[0, \{Round[(beta - alpha)/h - 1]\}],\\ 
+    Table[-1, \{Round[n - beta/h]\}]];\\
+  aInt[aVec\_] :=  Union[h (Last[Position[aVec, 1]] - 1), h (First[Position[aVec, -1]] - 1)];\\
+  \\
+  (*S matrix*)\\
+  Q[aVec\_] := MapThread[QRow, \{aVec, G\}];\\
+  T[aVec\_] := Q[aVec] - gamma DiagonalMatrix[RVector[aVec]];\\
+  S[aVec\_] := MatrixExp[aVec];\\
+  SRow[aVec, g\_] := S[aVec\_][[g h + 1, All]];\\
+  \\
+  (*iterative algorithm*)\\
+  A = \{\};\\
+  B = aVec[0, 1]; (*initial policy*)\\
+  LambdaImprovement = \{\};\\
+  PolicyImprovement = \{B\};\\
+  While[A != B,
+     \begin{addmargin}[1em]{0em}
+     A = B;\\
+     B = Table[Null, \{n\}];\\
+     EigenA = Eigensystem[S[A], 1];\\
+     lA = EigenA[[1, 1]];\\
+     vA = EigenA[[2, 1]];\\
+     vA = vA/Last[vA];\\
+     B[[1]] = 1;\\
+     B[[2]] = ArgMinList[\{\{0, SRow[0, h].vA\}, \{1, SRow[1, h].vA\}\}];\\
+     For[k = 2, k <= n - 3, k++,
+      \begin{addmargin}[1em]{0em}
+      B[[k + 1]] = ArgMinList[\{\{-1, SRow[-1, k h].vA\}, \{0, SRow[0, k h].vA\}, \{1, SRow[1, k h].vA\}\}];\\
+      ];
+      \end{addmargin}
+     B[[n - 1]] = ArgMinList[\{\{-1, SRow[-1, (n - 2) h].vA\}, \{0,SRow[0, (n - 2) h].vA\}\}];\\
+     If[B[[n - 1]] == Null, B[[2]] = A[[2]]];\\
+     B[[n]] = -1;\\
+     For[k = 1, k <= n, k++, If[B[[k]] == Null, B[[k]] = A[[k]]]];\\
+     PolicyImprovement = Append[PolicyImprovement, B];\\
+     LambdaImprovement = Append[LambdaImprovement, lA];\\
+     ]\\
+     \end{addmargin}   
+    LambdaImprovement =  Append[LambdaImprovement, Eigensystem[S[B], 1][[1, 1]]];\\
+  aInt[PolicyImprovement[[-1]]]\\
+  ]\\
+  \end{addmargin}
+\end{scriptsize}
+
+\end{appendices}
